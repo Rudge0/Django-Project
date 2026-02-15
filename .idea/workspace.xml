@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a6fcfc5-4c9a-4f22-86e8-f1482bf08760" name="Changes" comment="First commit. Created all structure, second lesson, beginning of the third">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +32,17 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Rudge0/Django-training.git&quot;,
-    &quot;accountId&quot;: &quot;fcb282e0-1249-4af6-b664-efe4d9c8e47b&quot;
+    &quot;url&quot;: &quot;https://github.com/Rudge0/Django-Project.git&quot;,
+    &quot;accountId&quot;: &quot;5308548c-a4bc-408c-b7c7-3dcc8c973577&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/catalog/models.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -51,15 +59,23 @@
     "Django Server.library.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.admin.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "H:/Python Projects/Django_Project",
-    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.python.group.settings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -74,7 +90,32 @@
       <recent name="H:\Python Projects\Django_Project\templates" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.Django-Project">
+    <configuration name="Django-Project" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Django-Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Library" type="Python.DjangoServer" factoryName="Django server">
       <module name="Django_Project" />
       <option name="ENV_FILES" value="" />
@@ -85,7 +126,6 @@
         <env name="DJANGO_SETTINGS_MODULE" value="settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (Django_Project)" />
       <option name="WORKING_DIRECTORY" value="H:\Python Projects\Django_Project" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -125,6 +165,8 @@
       <workItem from="1770993661945" duration="1962000" />
       <workItem from="1771193305188" duration="2618000" />
       <workItem from="1771197685546" duration="199000" />
+      <workItem from="1771198825387" duration="125000" />
+      <workItem from="1771198967092" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Created all structure, second lesson, beginning of the third">
       <option name="closed" value="true" />
