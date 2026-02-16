@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+  <title>{{ book.title }} | Library</title>
+{% endblock %}
+
+{% block content %}
+  <h1>{{ book.title }}</h1>
+  <p><strong>Price:</strong> {{ book.price }}</p>
+  <p><strong>Format:</strong> {{ book.format.name }}</p>
+
+  <div class="ml-3">
+    <h3>Authors</h3>
+    {% if book.author.all %}
+      {% for author in book.author.all %}
+        <hr>
+        <p>{{ author.id }}</p>
+        <p>{{ author.first_name }} {{ author.last_name }}
+          {% if author.pseudonym %}
+            {{ author.pseudonym }}
+          {% endif %}
+        </p>
+      {% endfor %}
+    {% else %}
+      <p>No authors assigned.</p>
+    {% endif %}
+  </div>
+{% endblock %}

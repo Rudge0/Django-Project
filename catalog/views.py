@@ -26,14 +26,12 @@ class LiteraryFormatListView(generic.ListView):
 class BookListView(generic.ListView):
     model = Book
     queryset = Book.objects.select_related("format")
+    paginate_by = 10
 
 class AuthorListView(generic.ListView):
     model = Author
     queryset = Author.objects.prefetch_related("books")
 
-def book_detail_view(request: HttpRequest, pk: int) -> HttpResponse:
-    book = Book.objects.select_related("format").prefetch_related("author").get(id=pk)
-    context = {
-        "book": book,
-    }
-    return render(request=request, context=context, template_name="catalog/book_detail.html")
+
+class BookDetailView(generic.DetailView):
+    model = Book
