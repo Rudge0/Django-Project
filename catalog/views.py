@@ -25,3 +25,7 @@ class LiteraryFormatListView(generic.ListView):
 
 class BookListView(generic.ListView):
     model = Book
+
+
+class AuthorListView(generic.ListView):
+    model = Author
