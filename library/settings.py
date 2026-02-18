@@ -119,6 +119,8 @@ STATICFILES_DIRS = [
 
 AUTH_USER_MODEL = "catalog.Author"
 
+LOGIN_REDIRECT_URL = "/catalog/"
+
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
