@@ -1,7 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse, reverse_lazy
 from django.views import generic
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 from .models import Book, Author, LiteraryFormat
@@ -30,18 +31,46 @@ class LiteraryFormatListView(LoginRequiredMixin, generic.ListView):
     context_object_name = "literary_format_list"
 
 
+class LiteraryFormatCreateView(LoginRequiredMixin, generic.CreateView):
+    model = LiteraryFormat
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:literary-formats-list")
+    template_name = "catalog/literary_format_form.html"
+
+
+class LiteraryFormatUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = LiteraryFormat
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:literary-formats-list")
+    template_name = "catalog/literary_format_form.html"
+
+
+class LiteraryFormatDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = LiteraryFormat
+    success_url = reverse_lazy("catalog:literary-formats-list")
+    template_name = "catalog/literary_format_confirm_delete.html"
+
+
 class BookListView(LoginRequiredMixin, generic.ListView):
     model = Book
     queryset = Book.objects.select_related("format")
     paginate_by = 10
+
+
+class BookDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Book
+
 
 class AuthorListView(LoginRequiredMixin, generic.ListView):
     model = Author
     queryset = Author.objects.prefetch_related("books")
 
 
-class BookDetailView(LoginRequiredMixin, generic.DetailView):
-    model = Book
+class AuthorCreateView(generic.CreateView):
+    model = Author
+    fields = ("first_name", "last_name", "username", "password", "pseudonym")
+    success_url = reverse_lazy("login")
+    template_name = "catalog/author_form.html"
 
 
 @login_required

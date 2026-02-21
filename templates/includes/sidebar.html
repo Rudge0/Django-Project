@@ -1,12 +1,19 @@
+{% if user.is_authenticated %}
+  User: {{ user.username }}
+  <br>
+  <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Log out</button>
+  </form>
+  {% comment %}
+    <a href="{% url 'logout' %}">Log out</a>
+  {% endcomment %}
+{% else %}
+  <a href="{% url 'login' %}">Log in</a>
+  <br>
+  <a href="{% url 'catalog:author-create-view' %}">Create new account</a>
+{% endif %}
 <ul class="sidebar-nav">
-  <li>
-    User: {{ user.username }}
-    <br>
-    <form action="{% url 'logout' %}" method="post">
-      {% csrf_token %}
-      <button type="submit">Logout</button>
-    </form>
-  </li>
   <li>
     --------
   </li>
