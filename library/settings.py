@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "catalog",
+    "crispy_forms",
+    "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -119,8 +121,12 @@ STATICFILES_DIRS = [
 
 AUTH_USER_MODEL = "catalog.Author"
 
+LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "/catalog/"
 
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
