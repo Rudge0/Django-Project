@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Author`s page:
+    <p>{{ author.first_name }} {{ author.last_name }}</p>
+    <a href="#" class="btn btn-secondary">Update</a>
+    <a href="#" class="btn btn-danger">Delete</a>
+  </h1>
+{% endblock %}

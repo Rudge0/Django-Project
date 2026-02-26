@@ -14,3 +14,8 @@ body {
 .author {
     list-style: lower-greek;
 }
+
+.link-to-page {
+    float: right;
+    margin: 0 2px 0 2px;
+}
