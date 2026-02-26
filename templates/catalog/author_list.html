@@ -2,10 +2,18 @@
 
 {% block content %}
   {% if author_list %}
-    <h1>All authors:</h1>
+    <h1>
+      All authors:
+      <a href="{% url 'catalog:author-create' %}" class="btn btn-primary link-to-page">Create</a>
+    </h1>
     <ul>
       {% for author in author_list %}
-        <li class="author">{{ author.first_name }} {{ author.last_name }}</li>
+        <li class="list-item">
+          {{ author.id }}:
+          <a href="{% url 'catalog:author-detail' pk=author.id %}">
+            {{ author.first_name }} {{ author.last_name }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   {% else %}

@@ -24,5 +24,7 @@
     {% else %}
       <p>No authors assigned.</p>
     {% endif %}
+    <a href="{% url 'catalog:book-update' pk=book.id %}" class="btn btn-secondary">Update</a>
+    <a href="#" class="btn btn-danger">Delete</a>
   </div>
 {% endblock %}

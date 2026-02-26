@@ -5,6 +5,7 @@ from django.views import generic
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
+from .forms import AuthorCreationForm, BookForm
 from .models import Book, Author, LiteraryFormat
 
 
@@ -61,20 +62,25 @@ class BookDetailView(LoginRequiredMixin, generic.DetailView):
     model = Book
 
 
+class BookCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Book
+    form_class = BookForm
+
+
+class BookUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Book
+    form_class = BookForm
+
 class AuthorListView(LoginRequiredMixin, generic.ListView):
     model = Author
     queryset = Author.objects.prefetch_related("books")
 
 
-class AuthorCreateView(generic.CreateView):
+class AuthorCreateView(LoginRequiredMixin, generic.CreateView):
     model = Author
-    fields = ("first_name", "last_name", "username", "password", "pseudonym")
-    success_url = reverse_lazy("login")
-    template_name = "catalog/author_form.html"
+    form_class = AuthorCreationForm
 
 
-@login_required
-def test_session_view(request: HttpRequest) -> HttpResponse:
-    return HttpResponse(
-        "<h1>Test session</h1>"
-    )
+class AuthorDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Author
+    queryset = Author.objects.all().prefetch_related("books")
