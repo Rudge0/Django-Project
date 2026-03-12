@@ -4,27 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a6fcfc5-4c9a-4f22-86e8-f1482bf08760" name="Changes" comment="Almost finished third lesson">
-      <change afterPath="$PROJECT_DIR$/catalog/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/catalog/author_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/catalog/book_form.html" afterDir="false" />
+    <list default="true" id="3a6fcfc5-4c9a-4f22-86e8-f1482bf08760" name="Changes" comment="Form lesson finished, troubles with Author password">
+      <change afterPath="$PROJECT_DIR$/catalog/templatetags/query_transform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/tests/test_admin_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/tests/test_forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/tests/test_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog/tests/tests_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catalog/author_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/author_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/catalog/author_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/author_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catalog/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/book_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/catalog/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/book_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catalog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catalog/literary_format_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/literary_format_confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catalog/literary_format_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catalog/literary_format_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/pagination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/logged_out.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop-pc" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,11 +57,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Rudge0/Django-Project.git&quot;,
-    &quot;accountId&quot;: &quot;5308548c-a4bc-408c-b7c7-3dcc8c973577&quot;
+    &quot;accountId&quot;: &quot;fcb282e0-1249-4af6-b664-efe4d9c8e47b&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/catalog/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/catalog/author_list.html" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/catalog/literary_format_form.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -94,6 +90,14 @@
     &quot;Django Server.Library.executor&quot;: &quot;Run&quot;,
     &quot;Django Server.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;Django Server.library.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.ModelTests.test_literary_format_str.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.executor&quot;: &quot;Debug&quot;,
+    &quot;Django tests.Test: catalog.tests.test_admin.AdminSiteTests.test_author_detail_pseudonym_listed.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.test_forms.FormsTests.test_author_creation_form_with_pseudonym_first_last_name_is_valid.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.test_views.PrivateAuthorTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.test_views.PrivateLiteraryFormatTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.test_views.PrivateLiteraryFormatTest.test_retrieve_literary_formats.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: catalog.tests.test_views.PublicLiteraryFormatTest.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
     &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
@@ -110,7 +114,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop-mac&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;H:/Python Projects/Django_Project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -129,12 +133,124 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Python Projects\Django_Project\catalog\tests" />
+      <recent name="H:\Python Projects\Django_Project\catalog\tests_models" />
       <recent name="H:\Python Projects\Django_Project\templates\catalog" />
       <recent name="$PROJECT_DIR$" />
       <recent name="H:\Python Projects\Django_Project\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Django-Project">
+  <component name="RunManager" selected="Django tests.Test: catalog.tests.test_views.PrivateAuthorTests">
+    <configuration name="Test: catalog.tests.test_forms.FormsTests.test_author_creation_form_with_pseudonym_first_last_name_is_valid" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Django_Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="TARGET" value="catalog.tests.test_forms.FormsTests.test_author_creation_form_with_pseudonym_first_last_name_is_valid" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: catalog.tests.test_views.PrivateAuthorTests" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Django_Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="TARGET" value="catalog.tests.test_views.PrivateAuthorTests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: catalog.tests.test_views.PrivateLiteraryFormatTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Django_Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="TARGET" value="catalog.tests.test_views.PrivateLiteraryFormatTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: catalog.tests.test_views.PrivateLiteraryFormatTest.test_retrieve_literary_formats" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Django_Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="TARGET" value="catalog.tests.test_views.PrivateLiteraryFormatTest.test_retrieve_literary_formats" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: catalog.tests.test_views.PublicLiteraryFormatTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="Django_Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="TARGET" value="catalog.tests.test_views.PublicLiteraryFormatTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Django-Project" type="Python.DjangoServer" factoryName="Django server">
       <module name="Django-Project" />
       <option name="ENV_FILES" value="" />
@@ -170,6 +286,7 @@
         <env name="DJANGO_SETTINGS_MODULE" value="settings" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (Django_Project)" />
       <option name="WORKING_DIRECTORY" value="H:\Python Projects\Django_Project" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -186,6 +303,24 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.Django-Project" />
+      <item itemvalue="Django Server.Library" />
+      <item itemvalue="Django tests.Test: catalog.tests.test_forms.FormsTests.test_author_creation_form_with_pseudonym_first_last_name_is_valid" />
+      <item itemvalue="Django tests.Test: catalog.tests.test_views.PrivateAuthorTests" />
+      <item itemvalue="Django tests.Test: catalog.tests.test_views.PrivateLiteraryFormatTest" />
+      <item itemvalue="Django tests.Test: catalog.tests.test_views.PrivateLiteraryFormatTest.test_retrieve_literary_formats" />
+      <item itemvalue="Django tests.Test: catalog.tests.test_views.PublicLiteraryFormatTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: catalog.tests.test_views.PrivateAuthorTests" />
+        <item itemvalue="Django tests.Test: catalog.tests.test_forms.FormsTests.test_author_creation_form_with_pseudonym_first_last_name_is_valid" />
+        <item itemvalue="Django tests.Test: catalog.tests.test_views.PrivateLiteraryFormatTest" />
+        <item itemvalue="Django tests.Test: catalog.tests.test_views.PrivateLiteraryFormatTest.test_retrieve_literary_formats" />
+        <item itemvalue="Django tests.Test: catalog.tests.test_views.PublicLiteraryFormatTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -221,6 +356,15 @@
       <workItem from="1771807391029" duration="12000" />
       <workItem from="1771807469513" duration="7889000" />
       <workItem from="1772056903856" duration="11315000" />
+      <workItem from="1772143969453" duration="5069000" />
+      <workItem from="1772278513152" duration="2229000" />
+      <workItem from="1772280774231" duration="8572000" />
+      <workItem from="1772290776635" duration="7577000" />
+      <workItem from="1772804568663" duration="1856000" />
+      <workItem from="1773057294824" duration="12103000" />
+      <workItem from="1773226549475" duration="1040000" />
+      <workItem from="1773239490182" duration="9084000" />
+      <workItem from="1773322418514" duration="5865000" />
     </task>
     <task id="LOCAL-00001" summary="First commit. Created all structure, second lesson, beginning of the third">
       <option name="closed" value="true" />
@@ -278,7 +422,15 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Django_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1771283830773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests.coverage" NAME="Test: catalog.tests Coverage Results" MODIFIED="1772282611860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_test_views_PrivateLiteraryFormatTest.coverage" NAME="Test: catalog.tests.test_views.PrivateLiteraryFormatTest Coverage Results" MODIFIED="1772288818652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_ModelTests_test_literary_format_str.coverage" NAME="Test: catalog.tests.ModelTests.test_literary_format_str Coverage Results" MODIFIED="1772279796191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_test_forms_FormsTests_test_author_creation_form_with_pseudonym_first_last_name_is_valid.coverage" NAME="Test: catalog.tests.test_forms.FormsTests.test_author_creation_form_with_pseudonym_first_last_name_is_valid Coverage Results" MODIFIED="1772289248149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Django_Project$admin.coverage" NAME="admin Coverage Results" MODIFIED="1770938929529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/catalog" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_test_views_PrivateLiteraryFormatTest_test_retrieve_literary_formats.coverage" NAME="Test: catalog.tests.test_views.PrivateLiteraryFormatTest.test_retrieve_literary_formats Coverage Results" MODIFIED="1772288708956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_test_views_PublicLiteraryFormatTest.coverage" NAME="Test: catalog.tests.test_views.PublicLiteraryFormatTest Coverage Results" MODIFIED="1772287793798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Django_Project$asdf.coverage" NAME="asdf Coverage Results" MODIFIED="1771284034742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_test_admin_AdminSiteTests_test_author_detail_pseudonym_listed.coverage" NAME="Test: catalog.tests.test_admin.AdminSiteTests.test_author_detail_pseudonym_listed Coverage Results" MODIFIED="1772282859948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Django_Project$Test__catalog_tests_test_views_PrivateAuthorTests.coverage" NAME="Test: catalog.tests.test_views.PrivateAuthorTests Coverage Results" MODIFIED="1772290481406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
